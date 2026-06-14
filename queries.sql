@@ -70,7 +70,8 @@ inner join users using(user_id)
 inner join matches using(match_id)
 
 -- Query 5:
-
+select user_id, full_name, booking_id from bookings
+full join users using(user_id);
 
 -- Query 6:
 
