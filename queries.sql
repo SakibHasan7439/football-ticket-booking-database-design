@@ -21,9 +21,6 @@ CREATE TABLE matches (
     match_status varchar(50) check (match_status in ('Available', 'Selling Fast', 'Sold Out', 'Postponed'))
 );
 
-select match_id, fixture, base_ticket_price from matches
-where (tournament_category = 'Champions League') and (match_status = 'Available');
-
 
 INSERT INTO Matches (match_id, fixture, tournament_category, base_ticket_price, match_status) VALUES
 (101, 'Real Madrid vs Barcelona', 'Champions League', 150.00, 'Available'),
@@ -52,3 +49,25 @@ INSERT INTO bookings (booking_id, user_id, match_id, seat_number, payment_status
 
 
 
+-- Query 1:
+  
+select match_id, fixture, base_ticket_price from matches
+where (tournament_category = 'Champions League') and (match_status = 'Available');
+
+-- Query 2:
+select * from users
+where full_name ILIKE 'tanvir%' or full_name ILIKE '%haque%';
+
+-- Query 3:
+
+
+-- Query 4:
+
+
+-- Query 5:
+
+
+-- Query 6:
+
+
+-- Query 7:
