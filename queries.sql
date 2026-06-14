@@ -21,6 +21,9 @@ CREATE TABLE matches (
     match_status varchar(50) check (match_status in ('Available', 'Selling Fast', 'Sold Out', 'Postponed'))
 );
 
+select match_id, fixture, base_ticket_price from matches
+where (tournament_category = 'Champions League') and (match_status = 'Available');
+
 
 INSERT INTO Matches (match_id, fixture, tournament_category, base_ticket_price, match_status) VALUES
 (101, 'Real Madrid vs Barcelona', 'Champions League', 150.00, 'Available'),
